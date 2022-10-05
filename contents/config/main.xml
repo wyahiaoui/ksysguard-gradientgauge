@@ -13,7 +13,7 @@
             <default>true</default>
         </entry>
         <entry name="angle" type="String">
-            <default>100</default>
+            <default>80</default>
         </entry>
         <entry name="gradientActive" type="Bool">
             <default>true</default>

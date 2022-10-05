@@ -182,9 +182,9 @@ Item {
                         sensorId: modelData
                         onSensorRateChanged: {
 
-                            if (sensorRate  <= Math.round(gradientSetup.angle * 2))
+                            if (sensorRate  <= gradientSetup.angle * 2)
                                 handColor.color = root.colorSource.map[modelData]
-                            else if (sensorRate  <= Math.round(gradientSetup.angle * 2 + gradientSetup.angle * .5)) {
+                            else if (sensorRate  <= gradientSetup.angle * 2.8) {
                                 handColor.color = controller.faceConfiguration.gradientColor
                                 handColor.color.r += root.colorSource.map[modelData].r 
                                 handColor.color.r /=2;

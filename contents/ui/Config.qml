@@ -52,6 +52,9 @@ Kirigami.FormLayout {
 
     ColorWheel {
         id: wheel
+        onAccepted: {
+            controller.faceConfiguration.gradientColor = wheel.color;
+        }
     }
 
 
@@ -96,7 +99,10 @@ Kirigami.FormLayout {
             height: 20
             MouseArea {
                 anchors.fill: parent
-                onClicked: wheel.open()
+                onClicked:{
+                    wheel.open();
+                    
+                }
             }   
         }
     }

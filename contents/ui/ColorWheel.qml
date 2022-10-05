@@ -3,7 +3,10 @@ import QtQuick.Controls 2.15
 import QtQuick.Dialogs 1.2
 
 Dialog {
+    id: colorDialog
+    readonly property color color: Qt.hsva(mousearea.angle, 1.0, 1.0, 1.0)
     Column {
+        id: columnDialog
         spacing: 5
 
         CheckBox {
@@ -22,7 +25,7 @@ Dialog {
             property real ringWidth: 15
             property real hsvValue: 1.0
             property real hsvSaturation: 1.0
-            readonly property color color: Qt.hsva(mousearea.angle, 1.0, 1.0, 1.0)
+            
 
 
 
@@ -70,7 +73,7 @@ Dialog {
                     color: 'white'
                     border {
                         width: mousearea.containsPress ? 3 : 1
-                        color: Qt.lighter(control.color)
+                        color: Qt.lighter(colorDialog.color)
                         Behavior on width { NumberAnimation { duration: 50 } }
                     }
 
@@ -87,10 +90,10 @@ Dialog {
                     height: width
                     radius: width
 
-                    color: control.color
+                    color: colorDialog.color
                     border {
                         width: 5
-                        color: Qt.lighter(control.color, 1.8)
+                        color: Qt.lighter(colorDialog.color, 1.8)
                     }
                 }
 
