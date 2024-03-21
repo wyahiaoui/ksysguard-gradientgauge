@@ -19,5 +19,6 @@
         "Version": "1.0",
         "Website": "https://plasma.kde.org/"
     },
-    "X-KDE-ParentApp": "org.kde.plasmashell"
+    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "KPackageStructure": "KSysguard/SensorFace"
 }
